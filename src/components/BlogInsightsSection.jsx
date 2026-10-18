@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import WaveButton from "./WaveButton";
 
 const posts = [
   {
@@ -167,20 +168,10 @@ export default function BlogInsightsSection() {
             </motion.h2>
           </div>
 
-          <motion.a
-            href="/insights"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.12 }}
-            className="group flex shrink-0 items-center gap-[17px] rounded-full bg-black py-[6px] pl-[27px] pr-[6px] text-[15px] font-semibold tracking-[-0.4px] text-white shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition-colors duration-300 hover:bg-[#202020]"
-          >
-            <span>View all insights</span>
-
-            <span className="flex size-[46px] items-center justify-center rounded-full bg-white text-black">
-              <ArrowIcon />
-            </span>
-          </motion.a>
+          <WaveButton
+            label="View all insights"
+            href="blog"
+          />
         </div>
 
         {/* Exact three-column blog layout */}

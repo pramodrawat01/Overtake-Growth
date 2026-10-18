@@ -16,7 +16,7 @@ const projects = [
     image: "/assets/case-studies/case_study_1.png",
     imagePosition: "center",
     color: "#247da0",
-    slug: "/case-studies/halegrove",
+    slug: "case-studies/halegrove",
   },
   {
     id: "marrow",
@@ -30,7 +30,7 @@ const projects = [
     image: "/assets/case-studies/case_study_2.png",
     imagePosition: "center",
     color: "#d91c24",
-    slug: "/case-studies/marrow-and-co",
+    slug: "case-studies/marrow-and-co",
   },
   {
     id: "nordhaus",
@@ -44,7 +44,7 @@ const projects = [
     image: "/assets/case-studies/case_study_3.png",
     imagePosition: "center",
     color: "#b8a58b",
-    slug: "/case-studies/nordhaus",
+    slug: "case-studies/nordhaus",
   },
 ];
 

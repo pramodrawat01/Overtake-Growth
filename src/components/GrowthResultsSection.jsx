@@ -170,7 +170,7 @@ function FeaturedCaseStudy() {
         <div className="mt-8 sm:mt-12">
           <WaveButton
             label="Read the case study"
-            href="/case-studies"
+            href="case-studies"
             variant="secondary"
             className="border-white/20 bg-white text-black
               hover:bg-white/90"

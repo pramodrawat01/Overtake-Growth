@@ -165,13 +165,13 @@ export default function Hero() {
             gap-4 sm:mt-8">
             <WaveButton
               label="Book a growth audit"
-              href="#contact"
+              href="contact"
               className="shadow-[0_12px_30px_rgba(0,0,0,0.24)]"
             />
 
             <WaveButton
               label="See our case studies"
-              href="#case-studies"
+              href="case-studies"
               variant="secondary"
               showArrow={false}
               className="px-6 py-[17px]"
