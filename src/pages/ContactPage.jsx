@@ -10,6 +10,8 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
+import CustomDropdown from "../components/CustomDropdown";
+import WaveButton from "../components/WaveButton";
 
 const interests = [
   "Paid social",
@@ -260,35 +262,21 @@ export default function ContactPage() {
                 </label>
 
                 <div className="relative">
-                  <select
-                    id="contact-budget"
-                    value={form.budget}
-                    onChange={(e) =>
-                      updateField("budget", e.target.value)
-                    }
-                    className={`${inputClass} appearance-none pr-14`}
-                  >
-                    <option value="$200k+ / month">
-                      $200k+ / month
-                    </option>
-                    <option value="$100k–$200k / month">
-                      $100k–$200k / month
-                    </option>
-                    <option value="$50k–$100k / month">
-                      $50k–$100k / month
-                    </option>
-                    <option value="$10k–$50k / month">
-                      $10k–$50k / month
-                    </option>
-                    <option value="Under $10k / month">
-                      Under $10k / month
-                    </option>
-                  </select>
+                  <CustomDropdown
+  id="contact-budget"
+  value={form.budget}
+  onChange={(value) => updateField("budget", value)}
+  className={`${inputClass} appearance-none pr-14`}
+  options={[
+    "$200k+ / month",
+    "$100k–$200k / month",
+    "$50k–$100k / month",
+    "$10k–$50k / month",
+    "Under $10k / month",
+  ]}
+/>
 
-                  <ChevronDown
-                    size={20}
-                    className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2"
-                  />
+                 
                 </div>
               </div>
 
@@ -331,7 +319,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col items-start justify-between gap-5 pt-3 sm:flex-row sm:items-center">
-                <button
+                {/* <button
                   type="submit"
                   className="group flex items-center gap-4 rounded-full bg-[#b7f59b] py-1.5 pl-6 pr-1.5 text-base font-medium text-[#777] transition-colors duration-300 hover:bg-[#a1ff63]"
                 >
@@ -340,7 +328,13 @@ export default function ContactPage() {
                   <span className="flex size-11 items-center justify-center rounded-full bg-[#777] text-white transition-transform duration-300 group-hover:rotate-45 group-hover:bg-black">
                     <ArrowUpRight size={24} />
                   </span>
-                </button>
+                </button> */}
+                <WaveButton
+                  label="Send message"
+                  type="submit"
+                  className=""
+                  variant="green"
+                />
 
                 <p className="text-left text-sm font-medium leading-tight text-[#777] sm:text-right">
                   We reply within one

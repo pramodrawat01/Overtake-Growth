@@ -147,7 +147,11 @@ export default function WhyOvertakeSection() {
                 text-xl font-semibold tracking-[-1px] text-black"
             >
               {/* <Leaf size={27} strokeWidth={2.5} /> */}
-              <OvertakeIcon/>
+             <img
+              src="/assets/logo.png"
+              alt="Overtake logo"
+              className="size-9 rounded-full object-contain"
+            />
               <span>
                 Overtake<sup className="ml-0.5 text-xs">®</sup>
               </span>

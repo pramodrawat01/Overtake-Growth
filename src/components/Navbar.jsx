@@ -50,19 +50,13 @@ function BrandLogo() {
     <Link
       to="/"
       aria-label="Overtake home"
-      className="flex shrink-0 items-center gap-2"
+      className="flex shrink-0 items-center"
     >
-      <svg viewBox="0 0 40 40" className="size-9" fill="none">
-        <circle cx="20" cy="20" r="19" fill="#2CA582" />
-        <path
-          d="M20 7v26M11 13l9 9 9-9M9 23l11 9 11-9M15 7l5 7 5-7"
-          stroke="white"
-          strokeWidth="2.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-
+     <img
+      src="/assets/logo_png.png"
+      alt="Overtake logo"
+      className="size-12 object-contain"
+    />
       <span className="text-[27px] font-semibold tracking-[-1.6px] text-black">
         Overtake<sup className="ml-0.5 text-[10px]">®</sup>
       </span>

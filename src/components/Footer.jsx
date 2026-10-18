@@ -311,16 +311,21 @@ export default function Footer() {
 
         {/* Oversized brand wordmark */}
         <div className="overflow-hidden px-5 sm:px-10 lg:px-[5.5%]">
-        <div className="flex items-center gap-5 sm:gap-8 lg:gap-10">
+        <div className="flex flex-col md:flex-row  items-center gap-4">
             {/* Logo icon */}
-            <div className="h-[85px] w-[85px] shrink-0 sm:h-[140px] sm:w-[140px] lg:h-[220px] lg:w-[220px]">
+            {/* <div className="h-[85px] w-[85px] shrink-0 sm:h-[140px] sm:w-[140px] lg:h-[220px] lg:w-[220px]">
             <OvertakeMark />
-            </div>
+            </div> */}
+            <img
+              src="/assets/logo_png.png"
+              alt="Overtake logo"
+              className="size-20 sm:size-30 md:size-40 lg:size-65 xl:size-80 object-contain"
+            />
 
             {/* Logo text */}
-            <div className="whitespace-nowrap text-[clamp(75px,14vw,230px)] font-semibold leading-none tracking-[5px] text-white">
+            <div className="whitespace-nowrap text-[clamp(75px,14vw,230px)]  font-semibold leading-none tracking-[5px] text-white">
             Overtake
-            <span className="ml-1 inline-block translate-y-[-1.1em] text-[18px] tracking-normal sm:text-[28px] lg:text-[38px]">
+            <span className="ml-1 inline-block translate-y-[-1.1em] text-[18px] tracking-normal sm:text-[28px] md:text-[32px] lg:text-[38px]">
                 ®
             </span>
             </div>
@@ -331,12 +336,12 @@ export default function Footer() {
         <div className="px-6 pb-10 pt-14 sm:px-10 lg:px-[5.5%] lg:pt-20">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
             <p className="text-[17px] font-semibold tracking-[-0.5px]">
-              © 2026 Overtake Growth Inc.
+             All rights reserved © 2026 Overtake Growth Inc.
             </p>
 
             <p className="text-[16px] font-medium text-white/65">
-              Design by <span className="text-white">Webestica</span>, Powered by{" "}
-              <span className="text-white">Framer</span>
+              {/* Design by <span className="text-white">Webestica</span>,  */}
+              Powered by{" "} <span className="text-white">Overtake Growth</span>
             </p>
           </div>
 
@@ -347,14 +352,15 @@ export default function Footer() {
           </div>
 
           <p className="mt-6 max-w-[1180px] text-[13px] font-medium leading-[1.35] tracking-[-0.2px] text-white/65">
-            Overtake Growth Inc. is an independent performance-marketing agency.
+            {/* Overtake Growth Inc. is an independent performance-marketing agency.
             Results referenced across this site reflect specific client
             engagements and are not a guarantee of future performance; media
             outcomes vary by budget, category, offer, and market conditions.
             Platform names and logos are trademarks of their respective owners
             and are used for identification only; reference to them does not
             imply partnership, endorsement, or certification unless explicitly
-            stated.
+            stated. */}
+            Overtake Growth Inc. is an independent performance marketing agency helping brands scale through strategic media buying, performance creative, and data-driven analytics. We partner with businesses to build sustainable growth strategies focused on measurable outcomes. Results may vary depending on budget, industry, offer, and market conditions. All third-party names and logos belong to their respective owners and do not imply an official partnership, endorsement, or certification unless explicitly stated.
           </p>
         </div>
       </div>
