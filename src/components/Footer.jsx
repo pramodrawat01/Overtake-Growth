@@ -1,16 +1,17 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import WaveButton from "./WaveButton";
 
 const pageLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Blog", href: "/insights" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const supportLinks = [
-  { label: "FAQs", href: "/faqs" },
+  { label: "FAQs", href: "/faq" },
   { label: "Contact us", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
 ];
@@ -229,27 +230,13 @@ export default function Footer() {
             your category?
           </motion.h2>
 
-          <motion.a
+          <WaveButton
+            label="Book a growth audit"
             href="/contact"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="group mt-5 inline-flex rotate-[-6deg] items-center gap-3 rounded-full bg-[#a1ff63] py-[6px] pl-7 pr-[6px] text-[15px] font-semibold text-black shadow-[0_0_45px_rgba(161,255,99,0.38)] transition-transform duration-300 hover:rotate-0"
-          >
-            Book a growth audit
-            <span className="flex size-[43px] items-center justify-center rounded-full bg-black text-white">
-              <svg viewBox="0 0 24 24" fill="none" className="size-6">
-                <path
-                  d="M5 19 19 5M7 5h12v12"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </motion.a>
+            variant="green"
+            tilted
+            className="mt-5"
+          />
         </section>
 
         {/* Newsletter and navigation */}

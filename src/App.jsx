@@ -7,6 +7,11 @@ import HomePage from "./pages/HomePage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import CaseStudyDetailPage from "./pages/CaseStudyDetailPage";
 import AboutPage from "./pages/AboutPage";
+import FaqPage from "./pages/FaqPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
 
 function PlaceholderPage({ title }) {
   return (
@@ -38,25 +43,31 @@ export default function App() {
             path="/case-studies/:slug"
             element={<CaseStudyDetailPage />}
           />
-          {/* <Route
-            path="case-studies"
-            element={<PlaceholderPage title="Case Studies" />}
-          /> */}
+          
           <Route
             path="about"
             element={<AboutPage/>}
           />
+          
           <Route
-            path="pages"
-            element={<PlaceholderPage title="Pages" />}
+            path="faq"
+            element={<FaqPage/>}
           />
           <Route
-            path="blog"
-            element={<PlaceholderPage title="Blog" />}
+            path="privacy-policy"
+            element={<PrivacyPolicy/>}
           />
           <Route
             path="contact"
-            element={<PlaceholderPage title="Start a Project" />}
+            element={<ContactPage/>}
+          />
+          <Route
+            path="blog"
+            element={<BlogPage/>}
+          />
+          <Route
+            path="blog/:slug"
+            element={<BlogDetailPage/>}
           />
         </Route>
 

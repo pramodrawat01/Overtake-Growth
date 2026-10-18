@@ -111,7 +111,7 @@ body {
 
 /* Pink services marquee */
 .services-track {
-  animation: services-scroll 28s linear infinite;
+  animation: services-scroll 48s linear infinite;
   will-change: transform;
 }
 

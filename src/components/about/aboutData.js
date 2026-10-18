@@ -1,11 +1,11 @@
 
 export const carouselImages = [
-  { src: "/assets/about/about1.png", alt: "Team collaboration", height: "h-[250px] sm:h-[310px]" },
-  { src: "/assets/about/about2.png", alt: "Creative team meeting", height: "h-[300px] sm:h-[360px]" },
-  { src: "/assets/about/about3.png", alt: "Designer working", height: "h-[340px] sm:h-[410px]" },
-  { src: "/assets/about/about4.png", alt: "Creative studio", height: "h-[280px] sm:h-[330px]" },
-  { src: "/assets/about/about5.png", alt: "Team member portrait", height: "h-[320px] sm:h-[390px]" },
-  { src: "/assets/about/about6.png", alt: "Skincare campaign", height: "h-[300px] sm:h-[360px]" },
+  { src: "/assets/about/about1.png", alt: "Team collaboration", height: "h-[430px]" },
+  { src: "/assets/about/about2.png", alt: "Creative team meeting", height: "h-[430px]" },
+  { src: "/assets/about/about3.png", alt: "Designer working", height: "h-[430px]" },
+  { src: "/assets/about/about4.png", alt: "Creative studio", height: "h-[430px]" },
+  { src: "/assets/about/about5.png", alt: "Team member portrait", height: "h-[430px]" },
+  { src: "/assets/about/about6.png", alt: "Skincare campaign", height: "h-[430px]" },
 ];
 
 export const principles = [
@@ -61,6 +61,6 @@ export const teamMembers = [
   {
     name: "Liam Novak",
     role: "Head of Growth Strategy",
-    image: "/assets/people/liam-novak.png",
+    image: "/assets/people/liyam-novak.png",
   },
 ];

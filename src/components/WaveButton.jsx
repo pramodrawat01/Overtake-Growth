@@ -4,7 +4,7 @@ const variants = {
   secondary:
     "bg-transparent text-[#111111] border border-[#111111]/70 hover:border-black",
   green:
-    "bg-[#a1ff63] text-black border border-[#a1ff63] shadow-[0_10px_30px_rgba(161,255,99,0.3)]",
+    "bg-[#a1ff63] text-black border border-[#a1ff63] shadow-[0_0_45px_rgba(161,255,99,0.38)] hover:shadow-[0_0_55px_rgba(161,255,99,0.5)]",
 };
 
 export default function WaveButton({
@@ -17,6 +17,7 @@ export default function WaveButton({
   onClick,
   target,
   rel,
+  tilted=false,
 }) {
   const text = label ?? children;
   const primary = variant === "primary";
@@ -44,8 +45,9 @@ export default function WaveButton({
         ${showArrow ? "py-2 pl-6 pr-2" : "px-7 py-[17px]"}
         whitespace-nowrap font-medium
         transition-all duration-300
+        ${tilted ? "rotate-[-6deg]" : ""}
         ${variants[variant] ?? variants.primary}
-        ${className}`}
+  ${className}`}
     >
       <span className="wave-label relative inline-grid overflow-hidden">
         <span className="wave-line flex">

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 
 const brands = [
   { name: "Ararat", style: "text-[30px] font-medium tracking-tight" },
@@ -66,6 +67,7 @@ function BrandItem({ brand }) {
       aria-label={brand.name}
     >
       <BrandMark name={brand.name} />
+
       <span className={brand.style}>
         {brand.name}
         {brand.name === "Ararat" && (
@@ -116,12 +118,21 @@ export default function BrandCarousel() {
     <section
       aria-label="Trusted brands"
       className="grid items-center gap-8 overflow-hidden bg-white
-     py-12  lg:grid-cols-[525px_minmax(0,1fr)]
-        lg:gap-0  lg:py-[70px]"
+        py-12 lg:grid-cols-[525px_minmax(0,1fr)]
+        lg:gap-0 lg:py-[70px]"
     >
-      {/* Fixed left section */}
-      <div className="relative z-10 flex items-center gap-5 bg-white pr-5
-        sm:gap-6 lg:pr-10">
+      {/* LEFT SECTION — appears first on scroll */}
+      <motion.div
+        initial={{ opacity: 0, y: 45 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="relative z-10 flex items-center gap-5 bg-white pr-5
+          sm:gap-6 lg:pr-10"
+      >
         <AvatarStack />
 
         <p className="max-w-[290px] text-[16px] font-medium leading-[1.2]
@@ -130,10 +141,20 @@ export default function BrandCarousel() {
           <br />
           teams from seed to 9 figures
         </p>
-      </div>
+      </motion.div>
 
-      {/* Moving right section */}
-      <div className="brand-carousel relative min-w-0 overflow-hidden">
+      {/* RIGHT SECTION — appears second on scroll */}
+      <motion.div
+        initial={{ opacity: 0, y: 45 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.25,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="brand-carousel relative min-w-0 overflow-hidden"
+      >
         <div className="brand-track flex w-max items-center">
           {[0, 1].map((copy) => (
             <div
@@ -142,12 +163,15 @@ export default function BrandCarousel() {
               aria-hidden={copy === 1 ? "true" : undefined}
             >
               {brands.map((brand) => (
-                <BrandItem key={`${copy}-${brand.name}`} brand={brand} />
+                <BrandItem
+                  key={`${copy}-${brand.name}`}
+                  brand={brand}
+                />
               ))}
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

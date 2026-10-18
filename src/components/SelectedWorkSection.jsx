@@ -60,12 +60,12 @@ function CaseStudyCard({ project, index, cardRef }) {
         ease: [0.22, 1, 0.36, 1],
       }}
       style={{
-        "--stack-top": `${150 + index * 14}px`,
+        "--stack-top": `${120 + index * 14}px`,
         zIndex: index + 1,
       }}
       className="selected-work-card group sticky mb-10 min-h-[540px]
         overflow-hidden rounded-[28px] sm:min-h-[600px]
-        sm:rounded-[34px] lg:min-h-[650px] "
+        sm:rounded-[34px] lg:min-h-[650px]"
     >
       {/* Background image */}
       <div

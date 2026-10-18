@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+
 const disciplines = [
   {
     number: "01",
